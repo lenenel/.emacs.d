@@ -24,14 +24,17 @@ Return a list of installed packages or nil for every skipped package."
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-(ensure-package-installed 'evil 'projectile 'magit 'helm)
+(ensure-package-installed 'evil 'projectile 'magit 'helm 'labburn-theme)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (evil-visual-mark-mode))))
+ '(custom-safe-themes
+   (quote
+    ("ffc01b1b3a7cc43c6d0f25ff5573c21fe6cdf2e4e6ab0e4667856f1a90b98c60" default)))
+ '(package-selected-packages (quote (labburn-theme evil-visual-mark-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -40,3 +43,9 @@ Return a list of installed packages or nil for every skipped package."
  )
 (require 'evil)
 (evil-mode t)
+(require 'labburn-theme)
+; (load-theme labburn)
+(require 'projectile)
+(projectile-mode)
+(require 'helm-config)
+(helm-mode 1)
