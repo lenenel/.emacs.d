@@ -24,7 +24,7 @@ Return a list of installed packages or nil for every skipped package."
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-(ensure-package-installed 'evil 'projectile 'magit 'helm 'labburn-theme)
+(ensure-package-installed 'evil 'projectile 'magit 'helm 'labburn-theme 'evil-magit)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -50,3 +50,4 @@ Return a list of installed packages or nil for every skipped package."
 (require 'helm-config)
 (helm-mode 1)
 (global-set-key (kbd "C-x g") 'magit-status)
+(require 'evil-magit)
