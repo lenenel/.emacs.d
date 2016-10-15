@@ -49,3 +49,4 @@ Return a list of installed packages or nil for every skipped package."
 (projectile-mode)
 (require 'helm-config)
 (helm-mode 1)
+(global-set-key (kbd "C-x g") 'magit-status)
