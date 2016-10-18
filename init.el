@@ -55,3 +55,11 @@ Return a list of installed packages or nil for every skipped package."
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
+(require 'org-install)
+(require 'org-mobile)
+(setq org-directory "~/OrgFiles")
+(setq org-mobile-directory "~/Dropbox/OrgMode")
+(setq org-mobile-inbox-for-pull "~/OrgFiles/from-mobile.org")
+(setq org-todo-keywords
+      '((sequence "TODO" "WAIT" "|" "DONE")))
+(setq org-tag-alist '(("@work" . ?w) ("@home" . ?h)))
