@@ -66,3 +66,6 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; disable autoscroll to position cursor and window center
 (setq scroll-conservatively 10)
+
+;; set indent level for JavaScript to 2
+(setq js-indent-level 2)
