@@ -63,3 +63,6 @@ Return a list of installed packages or nil for every skipped package."
 (setq org-todo-keywords
       '((sequence "TODO" "WAIT" "|" "DONE")))
 (setq org-tag-alist '(("@work" . ?w) ("@home" . ?h)))
+
+;; disable autoscroll to position cursor and window center
+(setq scroll-conservatively 10)
