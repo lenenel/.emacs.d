@@ -24,7 +24,7 @@ Return a list of installed packages or nil for every skipped package."
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-(ensure-package-installed 'evil 'projectile 'magit 'helm 'labburn-theme 'evil-magit)
+(ensure-package-installed 'evil 'projectile 'magit 'helm 'labburn-theme 'evil-magit 'org-jira)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -66,6 +66,14 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; disable autoscroll to position cursor and window center
 (setq scroll-conservatively 10)
-
+;; use spaces instead of tabs
+(setq-default intent-tabs-mode nil)
+;; set tab size to 2
+(setq tab-width 2)
 ;; set indent level for JavaScript to 2
 (setq js-indent-level 2)
+
+(require 'soap-client)
+(setq jiralib-url "https://jira.genesys.com")
+
+(require 'org-jira)
