@@ -34,6 +34,7 @@ Return a list of installed packages or nil for every skipped package."
  '(custom-safe-themes
    (quote
     ("ffc01b1b3a7cc43c6d0f25ff5573c21fe6cdf2e4e6ab0e4667856f1a90b98c60" default)))
+ '(org-agenda-files (quote ("~/OrgFiles/todos.org")))
  '(package-selected-packages (quote (labburn-theme evil-visual-mark-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
