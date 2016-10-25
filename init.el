@@ -72,7 +72,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; disable autoscroll to position cursor and window center
 (setq scroll-conservatively 10)
 ;; use spaces instead of tabs
-(setq-default intent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
 ;; set tab size to 2
 (setq tab-width 2)
 ;; set indent level for JavaScript to 2
