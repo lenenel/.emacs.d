@@ -24,7 +24,7 @@ Return a list of installed packages or nil for every skipped package."
 (setq package-enable-at-startup nil)
 (package-initialize)
 
-(ensure-package-installed 'evil 'projectile 'magit 'helm 'labburn-theme 'evil-magit 'org-jira)
+(ensure-package-installed 'evil 'projectile 'magit 'helm 'labburn-theme 'evil-magit 'org-jira 'which-key)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -59,6 +59,8 @@ Return a list of installed packages or nil for every skipped package."
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cc" 'org-capture)
+(define-key global-map "\C-cb" 'org-iswithcb)
 (setq org-log-done 't)
 (require 'org-install)
 (require 'org-mobile)
@@ -67,7 +69,7 @@ Return a list of installed packages or nil for every skipped package."
 (setq org-mobile-inbox-for-pull "~/OrgFiles/from-mobile.org")
 (setq org-todo-keywords
       '((sequence "TODO" "WAIT" "|" "DONE")))
-(setq org-tag-alist '(("@work" . ?w) ("@home" . ?h)))
+(setq org-tag-alist '(("work" . ?w) ("home" . ?h)))
 
 ;; disable autoscroll to position cursor and window center
 (setq scroll-conservatively 10)
@@ -82,3 +84,5 @@ Return a list of installed packages or nil for every skipped package."
 (setq jiralib-url "https://jira.genesys.com")
 
 (require 'org-jira)
+
+(which-key-mode 1)
