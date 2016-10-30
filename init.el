@@ -68,7 +68,7 @@ Return a list of installed packages or nil for every skipped package."
 (setq org-mobile-directory "~/Dropbox/OrgMode")
 (setq org-mobile-inbox-for-pull "~/OrgFiles/from-mobile.org")
 (setq org-todo-keywords
-      '((sequence "TODO" "WAIT" "|" "DONE")))
+      '((sequence "TODO" "|" "DONE")))
 (setq org-tag-alist '(("work" . ?w) ("home" . ?h)))
 
 ;; disable autoscroll to position cursor and window center
@@ -86,3 +86,6 @@ Return a list of installed packages or nil for every skipped package."
 (require 'org-jira)
 
 (which-key-mode 1)
+
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
